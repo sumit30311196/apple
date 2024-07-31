@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+.main-div{
+    width: 35%;
+    height: 372px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    -webkit-box-shadow: 9px 17px 23px -14px rgba(94,92,94,1);
+    -moz-box-shadow: 9px 17px 23px -14px rgba(94,92,94,1);
+    box-shadow: 9px 17px 23px -14px rgba(94,92,94,1);
+}
+.left{
+    width: 49%;
+    border: 3px solid black;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex span{
+    font-size: 28px;
+}
+.left button{
+    margin-left: 12px;
+    background-color: #909497;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: rgb(252, 250, 247);
+    font-size: 26px;
+}
+.right{
+    width: 49%;
+    float: right;
+    border: 3px solid black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.right button{
+    margin-right: 12px;
+    background-color: #909497;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: rgb(252, 250, 247);
+    font-size: 26px;
+}
+
+
+@media (max-width: 768px){
+    .main-div{
+        width: 100%;
+        height: 200px;
+    }
+    .left h1, .right h1{
+        font-size: 24px;
+    }
+    .right button{
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+    .left button{
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}
