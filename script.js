@@ -4,8 +4,6 @@ let right_a = document.querySelector(".right span");
 let righth1 = document.querySelector(".right .flex h1");
 let lefth1 = document.querySelector(".left .flex h1");
 
-//righth1.innerText = "jhdfjhhdj";
-
 let right = document.querySelector(".right");
 let left = document.querySelector(".left");
 
@@ -19,10 +17,20 @@ let leftapple = totalapples - rightapple;
 left_a.innerHTML = leftapple;
 right_a.innerHTML = rightapple;
 
+function greenleft(){
+    if(leftapple === 10){
+        left.style.borderColor = "green";
+    }else{
+        left.style.borderColor = "none";
+    }
+}
+//greenleft();
+
 function updateBorderColor() {
     if (leftapple < 0) {
         left.style.borderColor = "black";
-    } else {
+    }
+     else {
         left.style.borderColor = ""; // Reset border color if not negative
     }
 }
@@ -38,7 +46,9 @@ function updateBorderright() {
 function borderleftColor() {
     if (leftapple === 0) {
         left.style.borderColor = "red";
+        right.style.borderColor = "green";
     } else {
+        right.style.borderColor = "black";
         left.style.borderColor = "black"; // Reset border color if not negative
     }
 }
@@ -47,7 +57,9 @@ borderleftColor();
 function borderright() {
     if (rightapple === 0) {
         right.style.borderColor = "red";
+        left.style.borderColor = "green";
     } else {
+        left.style.borderColor = "black";
         right.style.borderColor = "black"; // Reset border color if not negative
     }
 }
@@ -79,13 +91,16 @@ left_b.addEventListener("click", () =>{
     rightapple--
     right_a.innerHTML = rightapple;
 
+
     left2();
     right2();
     borderright();
     updateBorderColor();
-   }else{
+    greenleft();
+   }
+   else{
     right.style.borderColor = "red";
-    //alert("You have no apples on the right side!")
+    alert("You Have No Apples on The Right Side!")
 }
 })
 
@@ -100,129 +115,12 @@ right_b.addEventListener("click", () =>{
     right2();
      updateBorderright();
      borderleftColor();
+     greenleft();
     }
     else{
         left.style.borderColor = "red";
+        alert("You Have No Apples on The Left Side!")
     }
  })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let leftp = document.getElementById("leftp");
-// let rightp = document.getElementById("rightp");
-
-// let l_b = document.querySelector(".left button");
-// let r_b = document.querySelector(".right button");
-
-// let totalapple = 10;
-
-// let rightapple = 0;
-// let leftapple = totalapple - rightapple;
-
-// leftp.innerText = leftapple;
-// rightp.innerHTML = rightapple;
-
-
-// l_b.addEventListener("click", () =>{
-//     if(rightapple > 0){
-//         leftapple++;
-//         leftp.innerHTML = leftapple;
-//         rightapple--;
-//         rightp.innerHTML = rightapple;
-//     }else{
-//         alert("End");
-//     }
-// })
-
-// r_b.addEventListener("click", () =>{
-//     if(leftapple > 0){
-//         rightapple++;
-//         rightp.innerHTML = rightapple;
-//         leftapple--;
-//         leftp.innerHTML = leftapple;
-//     }else{
-//         alert("End")
-//     }
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const totalapple = 10;
-
-// let secondbusketapple = 0;
-// let firstbusketapple = totalapple - secondbusketapple;
-
-// leftp.innerText = totalapple;
-// rightp.innerText = secondbusketapple;
-
-
-// lrftb.addEventListener("click", () =>{
-//     if (secondbusketapple > 0) {
-//         secondbusketapple--
-//         leftp.innerHTML = secondbusketapple;
-//         firstbusketapple++
-//         rightp.innerHTML = firstbusketapple;
-//     }else{
-//         alert("End")
-//     }
-// })
-// rightb.addEventListener("click", () =>{
-//   if(firstbusketapple > 0){
-//     firstbusketapple--
-//     leftp.innerText = firstbusketapple;
-//     secondbusketapple++
-//     rightp.innerText = secondbusketapple;
-//   }else{
-//     alert("End")
-//     }
-// })
-
-
+ greenleft();
